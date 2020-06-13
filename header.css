@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Raleway:ital,wght@1,700&display=swap');
+
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body, html, header{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  width: 100vw;
+  height: 100vh;
+}
+.background-wrapper{
+  width: 100vw;
+  padding: 0 0 100vh 0;
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background-wrapper img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+nav{
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  padding: 20px 30px;
+}
+
+#logo{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #0B877D;
+}
+
+#nav_links{
+  list-style: none;
+  font-size: 20px;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 150px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fff;
+  display: none;
+  z-index: 1;
+}
+#nav_links li{
+  line-height: 38px;
+  padding: 0 20vw;
+}
+#nav_links li:hover{
+  border-left: 4px solid #0B877D;
+}
+#nav_links li:hover>a{
+  color: #0B877D;
+}
+
+#nav_links a{
+  color: #3B3B40;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#nav_btns{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  padding: 15px 25px;
+}
+#nav_close_btn{
+  display: none;
+}
+
+#scroll_sign{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+#outer_scroll{
+  width: 15px;
+  height: 40px;
+  border: 3px solid #000;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+#inner_scroll{
+  width: 7px;
+  height: 17px;
+  border-radius: 5px;
+  background-color: #000;
+  margin: 2px auto;
+  animation: scroll 2s infinite ease-in-out;
+}
+
+@keyframes scroll{
+  0%{
+    transform: translateY(-10px);
+  }
+
+  33%{
+    transform: translateY(0);
+  }
+  66%{
+    transform: translateY(0);
+  }
+  100%{transform: translateY(-10px);}
+
+}
+.header_content{
+  position: absolute;
+  left:0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-end;
+}
+.header_title{
+  font-size: 30px;
+}
+
+@media (min-width: 768px){
+  .header_content{
+    width: 50vw;
+    height: 50vh;
+    justify-content: space-around;
+  }
+  .header_title{
+    font-size: 60px;
+  }
+}
